@@ -8,3 +8,7 @@ Para correr a aplicação:
 Para correr os testes:
 
 - bundle exec rspec
+- open coverage/index.html
+
+Outros comandos que poderão ser necessários:
+- bundle install
