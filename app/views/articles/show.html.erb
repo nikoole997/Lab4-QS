@@ -1,0 +1,18 @@
+<div class="flex align-center column-direction">
+<div ><h1><%= @article.title %></h1></div>
+
+<p><%= @article.body %></p>
+<div class="d-flex">
+<%= link_to "Edit", edit_article_path(@article), class:"btn btn-success" %>
+<%= link_to "Destroy", article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }, class:"btn btn-danger" %>
+</div>
+
+<% if @article.comments.count > 0  -%>
+<h2>Comments</h2>
+<%= render @article.comments %>
+<% end -%>
+
+<%= render 'comments/form' %>
+</div>

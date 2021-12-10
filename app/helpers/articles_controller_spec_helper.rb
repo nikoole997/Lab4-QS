@@ -1,0 +1,2 @@
+module ArticlesControllerSpecHelper
+end

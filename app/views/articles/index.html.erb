@@ -1,0 +1,16 @@
+<div class="flex align-center column-direction">
+<div ><h1>Articles</h1></div>
+<div>Our blog has <%= Article.public_count %> articles and counting!</div>
+  <div style="width: 30%" class="divArticles">
+    <ul class="list-group">
+      <% @articles.each do |article| %>
+        <li class="list-group-item">
+          <%= link_to article.title, article %>
+          <%= article.created_at%>
+        </li>
+      <% end %>
+    </ul>
+
+    <%= link_to "New Article", new_article_path,  id:"new_article", class:"btn btn-primary"%>
+  <div>
+<div>

@@ -1,0 +1,23 @@
+<div class="grey-background mt-4">
+<h2 class="my-4">Add a comment:</h2>
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+<div class="flex">
+    <div class="form-group mr-2">
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter, class: 'form-control' %>
+  </div>
+    <div class="form-group mr-2">
+    <%= form.label :body %><br>
+    <%= form.text_area :body, class: 'form-control' %>
+  </div>
+    <div class="form-group mr-2">
+  <%= form.label :status %><br>
+  <%= form.select :status, ['public', 'private', 'archived'], {selected: 'public'}, {required: 'true', class: 'form-control'} %>
+</div>
+  
+  </div>
+  <div class="flex justify-content-center ">
+    <%= form.submit 'Add comment', :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+</div>

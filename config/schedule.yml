@@ -1,0 +1,4 @@
+create_articles:
+  cron: "*/1 * * * *"
+  class: "CreateArticlesWorker"
+  queue: default
